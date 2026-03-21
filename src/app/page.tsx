@@ -27,10 +27,10 @@ export default function Home() {
           </motion.div>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }} className="hidden md:flex items-center gap-4">
-            <button className="text-sm text-gray-500 hover:text-[#111] transition-colors">Log in</button>
-            <button className="bg-[#ff5c00] text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#e05000] transition-all hover:scale-105">
+            <a href="/login" className="text-sm text-gray-500 hover:text-[#111] transition-colors">Log in</a>
+            <a href="/register" className="bg-[#ff5c00] text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#e05000] transition-all hover:scale-105">
               Get Started
-            </button>
+            </a>
           </motion.div>
 
           <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
@@ -42,7 +42,7 @@ export default function Home() {
             <a href="#features" className="text-gray-600 text-sm">Solutions</a>
             <a href="#how-it-works" className="text-gray-600 text-sm">How it works</a>
             <a href="#pricing" className="text-gray-600 text-sm">Pricing</a>
-            <button className="bg-[#ff5c00] text-white px-4 py-2 rounded-lg text-sm font-semibold w-full">Get Started</button>
+            <a href="/register" className="bg-[#ff5c00] text-white px-4 py-2 rounded-lg text-sm font-semibold w-full text-center">Get Started</a>
           </motion.div>
         )}
       </nav>
@@ -82,9 +82,9 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.5 }}
               className="flex gap-3"
             >
-              <button className="bg-[#ff5c00] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#e05000] transition-all hover:scale-105 flex items-center gap-2">
+              <a href="/register" className="bg-[#ff5c00] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#e05000] transition-all hover:scale-105 flex items-center gap-2">
                 Get Started <ArrowRight size={18} />
-              </button>
+              </a>
               <button className="border border-gray-300 text-gray-600 px-8 py-4 rounded-xl font-medium hover:border-gray-500 transition-all">
                 View Demo
               </button>
@@ -125,7 +125,7 @@ export default function Home() {
               <span className="text-sm font-medium text-gray-400">AI Insight</span>
             </div>
             <p className="text-sm text-gray-300 leading-relaxed">
-              "Your checkout page has <span className="text-[#ff5c00] font-bold">60% drop-off</span>. Simplify the form to increase conversions by an estimated 23%."
+              Your checkout page has <span className="text-[#ff5c00] font-bold">60% drop-off</span>. Simplify the form to increase conversions by an estimated 23%.
             </p>
             <div className="mt-4 flex items-center gap-2">
               <div className="w-6 h-6 bg-[#ff5c00] rounded-full flex items-center justify-center">
@@ -188,10 +188,10 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
-            { icon: <Zap size={20} />, title: "Real-time Event Tracking", desc: "Track page visits, button clicks, signups, and feature usage with a single API call. No complex setup required.", big: true },
-            { icon: <Brain size={20} />, title: "AI-Powered Insights", desc: "Groq LLaMA 3.3 analyzes your data and tells you exactly what's working and what needs fixing.", big: false },
-            { icon: <Shield size={20} />, title: "Fraud Detection", desc: "Automatically detect suspicious signup patterns and multiple accounts from the same IP.", big: false },
-            { icon: <Globe size={20} />, title: "Multi-tenant Architecture", desc: "Each company gets isolated data and API key. Your data never mixes with others.", big: false },
+            { icon: <Zap size={20} />, title: "Real-time Event Tracking", desc: "Track page visits, button clicks, signups, and feature usage with a single API call. No complex setup required." },
+            { icon: <Brain size={20} />, title: "AI-Powered Insights", desc: "Groq LLaMA 3.3 analyzes your data and tells you exactly what's working and what needs fixing." },
+            { icon: <Shield size={20} />, title: "Fraud Detection", desc: "Automatically detect suspicious signup patterns and multiple accounts from the same IP." },
+            { icon: <Globe size={20} />, title: "Multi-tenant Architecture", desc: "Each company gets isolated data and API key. Your data never mixes with others." },
           ].map((f, i) => {
             const ref = useRef(null);
             const inView = useInView(ref, { once: true, margin: "-50px" });
@@ -305,9 +305,9 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full py-3 rounded-xl font-bold text-sm transition-all hover:scale-105 ${p.highlighted ? "bg-white text-[#ff5c00] hover:bg-orange-50" : "bg-[#111] text-white hover:bg-[#333]"}`}>
+                <a href="/register" className={`block w-full py-3 rounded-xl font-bold text-sm transition-all hover:scale-105 text-center ${p.highlighted ? "bg-white text-[#ff5c00] hover:bg-orange-50" : "bg-[#111] text-white hover:bg-[#333]"}`}>
                   {p.cta}
-                </button>
+                </a>
               </motion.div>
             );
           })}
@@ -324,9 +324,9 @@ export default function Home() {
               <h2 className="text-5xl md:text-7xl font-black text-white leading-none tracking-tight uppercase mb-8">
                 READY TO KNOW<br />YOUR USERS?
               </h2>
-              <button className="bg-white text-[#ff5c00] px-10 py-4 rounded-xl font-black text-lg hover:bg-orange-50 transition-all hover:scale-105 flex items-center gap-2 mx-auto">
+              <a href="/register" className="bg-white text-[#ff5c00] px-10 py-4 rounded-xl font-black text-lg hover:bg-orange-50 transition-all hover:scale-105 inline-flex items-center gap-2">
                 Get started for free <ArrowRight size={20} />
-              </button>
+              </a>
             </motion.div>
           );
         })()}
